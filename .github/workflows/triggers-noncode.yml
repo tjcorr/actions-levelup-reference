@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu- latest
     steps:
       - name: test
-        run: echo "new issue created with title: $ISSUE"
+        run: 'echo new issue created with title: $ISSUE'
         env:
           ISSUE: ${{ github.event.issue.title }}
