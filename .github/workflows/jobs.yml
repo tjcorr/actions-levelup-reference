@@ -1,9 +1,7 @@
-name: Triggers Example
+name: Multiple Jobs
 
 on:
-  push:
   workflow_dispatch:
-
 
 jobs:
   build:
