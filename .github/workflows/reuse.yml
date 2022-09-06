@@ -1,0 +1,15 @@
+name: Reusable Workflow Example
+
+on:
+  push:
+    paths:
+    - '.github/workflows/reuse.yml'
+    
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+    - name: setup
+      run: echo setup
+  build-deploy:
+    uses: ./.github/workflows/reusable-workflow.yml
