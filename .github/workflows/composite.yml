@@ -19,6 +19,8 @@ jobs:
     
     - name: Deploy ACR
       uses: './.github/workflows/composite/sample'
+      with:
+        acr-name: ${{ env.ACR-NAME }}
        
     - name: Publish Container
       run: echo push container
