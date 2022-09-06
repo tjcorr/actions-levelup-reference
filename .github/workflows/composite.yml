@@ -1,3 +1,5 @@
+name: Composite Action Example
+
 on:
   push: 
     paths:
