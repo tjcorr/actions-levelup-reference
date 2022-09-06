@@ -5,18 +5,20 @@ on:
     
 env:
   ACR-NAME: myacr
+
+jobs:
+  main:  
+    runs-on: ubuntu-latest
     
- jobs:
-   main:  
-     steps:
-     - name: Clone Code
-       uses: actions/checkout@v2
+    steps:
+    - name: Clone Code
+      uses: actions/checkout@v2
+    
+    - name: Build code
+      run: echo build code
+    
+    - name: Deploy ACR
+      uses: '.github/workflows/composite/sample@main'
        
-     - name: Build code
-       run: echo build code
-       
-     - name: Deploy ACR
-       uses: '.github/workflows/composite/sample'
-       
-     - name: Publish Container
-       run: echo push container
+    - name: Publish Container
+      run: echo push container
