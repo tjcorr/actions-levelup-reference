@@ -18,7 +18,7 @@ jobs:
       run: echo build code
     
     - name: Deploy ACR
-      uses: './.github/workflows/composite/sample@main'
+      uses: './.github/workflows/composite/sample'
        
     - name: Publish Container
       run: echo push container
