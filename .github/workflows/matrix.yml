@@ -14,6 +14,7 @@ jobs:
         run: echo Building code
 
   test_matrix:
+    needs: [build]
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest]
