@@ -1,0 +1,12 @@
+name: Issue Trigger
+
+# There are a huge number of different events you can trigger off of
+#   see https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+on:
+  issues: [created]
+  
+jobs: 
+  new-issue:
+    steps:
+      - name: test
+        run: echo "new issue created"
