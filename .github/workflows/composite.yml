@@ -1,0 +1,22 @@
+on:
+  push: 
+    paths:
+    - '.github/workflows/composite.yml'
+    
+env:
+  ACR-NAME: myacr
+    
+ jobs:
+   main:  
+     steps:
+     - name: Clone Code
+       uses: actions/checkout@v2
+       
+     - name: Build code
+       run: echo build code
+       
+     - name: Deploy ACR
+       uses: '.github/workflows/composite/sample'
+       
+     - name: Publish Container
+       run: echo push container
