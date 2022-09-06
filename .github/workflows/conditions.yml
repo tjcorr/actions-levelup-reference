@@ -1,7 +1,7 @@
 name: Conditionals
 
 on:
-  workflow_dipatch:
+  workflow_dispatch:
     inputs:
       runstep:
         description: "Run the optional step?"
@@ -11,6 +11,7 @@ on:
         
 jobs:
   main:
+    runs-on: ubuntu-latest
     steps:
       - name: setup
         run: echo setup
