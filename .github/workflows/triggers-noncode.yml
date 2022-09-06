@@ -3,7 +3,8 @@ name: Issue Trigger
 # There are a huge number of different events you can trigger off of
 #   see https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
 on:
-  issues: [created]
+  issues: 
+    types: [opened]
   
 jobs: 
   new-issue:
