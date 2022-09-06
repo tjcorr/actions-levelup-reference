@@ -1,4 +1,4 @@
-name: Multiple Jobs
+name: Matrix Jobs
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
         run: echo test of version ${{ matrix.version }} on  ${{ matrix.os }}
 
   deploy:
-    needs: [test-linux, test-win]
+    needs: [test_matrix]
     runs-on: ubuntu-latest
     steps:
       - name: test
